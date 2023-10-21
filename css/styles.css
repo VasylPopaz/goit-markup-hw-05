@@ -296,7 +296,7 @@ input {
   min-width: 169px;
   height: 56px;
   border: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--primary-font);
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: var(--iris-text-color);
@@ -565,7 +565,11 @@ input {
   width: 264px;
   height: 40px;
   padding-left: 16px;
-  background-color: var(--secondary-navy-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: transparent;
   color: var(--primary-white-color);
   border-radius: 4px;
   border: 1px solid var(--primary-white-color);
@@ -583,8 +587,7 @@ input {
 .subscribe-btn {
   min-width: 165px;
   height: 40px;
-  display: inline-flex;
-  gap: 16px;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
@@ -594,7 +597,7 @@ input {
   background: var(--iris-text-color);
   color: var(--WHITE, #fff);
   text-align: center;
-  font-family: Roboto;
+  font-family: var(--primary-font);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -602,6 +605,7 @@ input {
 }
 
 .send-icon {
+  margin-left: 16px;
   fill: var(--primary-white-color);
 }
 /**
@@ -697,7 +701,7 @@ input {
 
 .filter-btn {
   padding: 12px 24px;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--primary-font);
   border: 1px solid var(--cornflower-color);
   border-radius: 4px;
   background: var(--cloud-color);
@@ -808,14 +812,17 @@ input {
   letter-spacing: 0.02em;
 }
 
+.label-container {
+  margin-bottom: 8px;
+}
 .reg-form .label-description {
   display: block;
+  margin-bottom: 4px;
   color: var(--light-slate-color);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
-  margin-bottom: 4px;
 }
 
 .reg-input {
@@ -944,7 +951,7 @@ input {
   color: var(--primary-white-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
-  font-family: Roboto;
+  font-family: var(--primary-font);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
