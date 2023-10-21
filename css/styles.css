@@ -834,13 +834,29 @@ input {
   border: 1px solid var(--navy-blue-modal);
   background-color: transparent;
   outline: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reg-input:hover,
+.reg-input:focus,
+.reg-textarea:hover,
+.reg-textarea:focus {
+  border: 1px solid var(--iris-text-color);
+}
+
+.reg-input:hover + .input-icon,
+.reg-input:focus + .input-icon {
+  fill: var(--iris-text-color);
 }
 
 .label-comment {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.textarea-container {
+  margin-bottom: 16px;
 }
 
 .reg-textarea {
@@ -853,6 +869,7 @@ input {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--navy-blue-modal);
   outline: transparent;
@@ -870,6 +887,7 @@ input {
 .checkbox-container {
   margin-bottom: 24px;
 }
+
 .label-check {
   display: block;
   color: var(--light-slate-color);
@@ -879,7 +897,7 @@ input {
   letter-spacing: 0.04em;
 }
 
-.label-check a {
+.link-privacy {
   color: var(--iris-text-color);
   font-size: 12px;
   font-weight: 400;
@@ -898,11 +916,13 @@ input {
   border-radius: 2px;
   border: 1px solid var(--navy-blue-modal);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-icon {
-  fill: var(--cloud-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
 .input-container {
@@ -917,32 +937,20 @@ input {
   fill: var(--secondary-navy-color);
 }
 
-.textarea-container {
-  margin-bottom: 16px;
-}
-
-.reg-input:hover,
-.reg-input:focus,
-.reg-textarea:hover,
-.reg-textarea:focus {
-  border: 1px solid var(--iris-text-color);
-}
-
-.reg-input:hover + .input-icon,
-.reg-input:focus + .input-icon {
-  fill: var(--iris-text-color);
-}
-
 .input-check:checked + .label-check .checkbox-custom {
   background-color: var(--accent-color);
   border: none;
+}
+
+.input-check:checked + .label-check .check-icon {
+  fill: var(--cloud-color);
 }
 
 .send-btn {
   display: block;
   margin: 0 auto;
   height: 56px;
-  width: 169px;
+  min-width: 169px;
   padding: 16px 32px;
   border: none;
   border-radius: 4px;
