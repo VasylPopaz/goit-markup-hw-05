@@ -877,6 +877,7 @@ textarea {
 }
 
 .input-container {
+  display: inline-block;
   margin-top: 4px;
   position: relative;
 }
