@@ -604,6 +604,11 @@ input {
   letter-spacing: 0.04em;
 }
 
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--accent-color);
+}
+
 .send-icon {
   margin-left: 16px;
   fill: var(--primary-white-color);
@@ -938,10 +943,6 @@ input {
   background-color: var(--accent-color);
   fill: #f4f4fd;
 }
-
-/* .input-check:checked + .label-check .check-icon {
-  fill: var(--cloud-color);
-} */
 
 .send-btn {
   display: block;
